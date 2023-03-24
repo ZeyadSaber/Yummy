@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Yummy</title>
+  </head>
+  <body class="bg-dark">
+    <div class="row position-fixed side side-closed">
+      <div class="col-8 vh-100 bg-dark text-white p-2">
+        <ul class="list-unstyled p-3">
+          <li class="my-3">Search</li>
+          <li class="my-3">Categories</li>
+          <li class="my-3">Area</li>
+          <li class="my-3">Ingredients</li>
+          <li class="my-3">Contact</li>
+        </ul>
+      </div>
+      <div
+        class="col-2 vh-100 d-flex text-center align-items-center justify-content-center bg-white side-bar"
+      >
+        <i class="fa fa-align-justify"></i>
+      </div>
+    </div>
+    <section id="home" class="d-block">
+      <div class="container">
+        <div class="row meals"></div>
+      </div>
+    </section>
+    <section id="details" class="d-none">
+      <div class="container">
+        <div class="row p-5">
+        </div>
+      </div>
+    </section>
+    <section id="search" class="d-none">
+      <div class="container w-75" id="searchContainer">
+        <div class="row py-4 ">
+            <div class="col-md-6 ">
+                <input onkeyup="searchByName(this.value)" class="form-control bg-transparent text-white" type="text" placeholder="Search By Name">
+            </div>
+            <div class="col-md-6">
+                <input onkeyup="searchByFLetter(this.value)" maxlength="1" class="form-control bg-transparent text-white" type="text" placeholder="Search By First Letter">
+            </div>
+        </div>
+        <div class="row meals">
+
+        </div>
+      </div>
+    </section>
+    <section id="categories" class="d-none">
+      <div class="container w-75">
+        <div class="categories row">
+        </div>
+      </div>
+    </section>
+    <section id="area" class="d-none">
+      <div class="container w-75">
+        <div class="row">
+        </div>
+      </div>
+    </section>
+    <section id="ingredients" class="d-none">
+      <div class="container w-75">
+        <div class="row">
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="d-none">
+      <div class="container w-75 text-white">
+        <form>
+          <div class="form-group mb-3">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="phone">Phone:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" name="age" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="password2">Re-enter Password:</label>
+            <input type="password" class="form-control" id="password2" name="password2" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit-btn" disabled>Submit</button>
+        </form>
+      </div>
+    </section>
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"
+    ></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
